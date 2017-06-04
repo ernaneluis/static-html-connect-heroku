@@ -1,0 +1,787 @@
+/*
+Theme Name: Angela Axworthy
+Author: Olivier Guillard
+Author URI: http://www.theworldwelivein.co.uk
+Version: 2.0
+*/
+
+* {background-repeat: no-repeat;position: relative;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+*:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+ 	font-family: "prestige-elite-std", monospace;
+  color: #000;
+  background-color: #f4f3f3;
+  margin-bottom: 350px;
+}
+
+h1 {
+	font-size: 1.25em;
+	line-height: 2em;
+}
+
+h2 {
+  font-size: .95em;
+  line-height: 2em;
+  font-weight: bold;
+}
+
+p, li {
+	font-size: .95em;
+	line-height: 2em;
+	margin-bottom: 1.65em;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  padding-bottom: 2px;
+
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+a:hover {
+ color: #598f75;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* --------------------------------
+
+Typography
+
+-------------------------------- */
+
+.hero p {
+	font-size: 1.25em;
+}
+
+.year {
+	font-weight: bold;
+}
+
+.title {
+
+}
+
+sup {
+	font-size: .75em;
+	vertical-align: super;
+}
+
+em, cite {
+	font-style: italic;
+}
+
+/* Logo Animation */
+
+.ip-loader-circle {
+	display: none;
+}
+
+.large-square {
+  fill-opacity: 0;
+  stroke: #2C313B;
+  stroke-width: 1;
+  stroke-dasharray: 870;
+  stroke-dashoffset: 870;
+
+  -webkit-animation: draw 4s forwards linear; /* Safari 4+ */
+  -moz-animation: draw 4s forwards linear; /* Fx 5+ */
+  -o-animation: draw 4s forwards linear; /* Opera 12+ */
+  animation:  draw 4s forwards linear; /* IE 10+, Fx 29+ */
+
+  animation-delay: .8s;
+
+}
+
+.small-square {
+  fill-opacity: 0;
+  stroke: #2C313B;
+  stroke-width: 1;
+  stroke-dasharray: 870;
+  stroke-dashoffset: 870;
+
+	-webkit-animation: draw 8s forwards linear; /* Safari 4+ */
+	-moz-animation: draw 8s forwards linear; /* Fx 5+ */
+	-o-animation: draw 8s forwards linear; /* Opera 12+ */
+	animation:  draw 8s forwards linear; /* IE 10+, Fx 29+ */
+
+	animation-delay: 1s;
+}
+
+.line-one {
+	fill-opacity: 0;
+	stroke: #2C313B;
+	stroke-width: 1;
+	stroke-dasharray: 870;
+	stroke-dashoffset: 870;
+
+	-webkit-animation: draw 6s forwards linear; /* Safari 4+ */
+	-moz-animation: draw 6s forwards linear; /* Fx 5+ */
+	-o-animation: draw 6s forwards linear; /* Opera 12+ */
+	animation:  draw 6s forwards linear; /* IE 10+, Fx 29+ */
+
+	animation-delay: 1s;
+}
+
+.line-two {
+	fill-opacity: 0;
+	stroke: #2C313B;
+	stroke-width: 1;
+	stroke-dasharray: 870;
+	stroke-dashoffset: 870;
+
+	-webkit-animation: draw 8s forwards linear; /* Safari 4+ */
+	-moz-animation: draw 8s forwards linear; /* Fx 5+ */
+	-o-animation: draw 8s forwards linear; /* Opera 12+ */
+	animation:  draw 8s forwards linear; /* IE 10+, Fx 29+ */
+
+	animation-delay: 1s;
+}
+
+
+@-webkit-keyframes draw {
+ from {
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+from {
+   stroke-dashoffset: 1000;
+ }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* --------------------------------
+
+Animations
+
+-------------------------------- */
+
+.ip-header {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	min-height: 480px;
+	width: 100%;
+	height: 100%;
+	background: #f4f3f3;
+}
+
+.ip-loader {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+
+.ip-loader {
+	top: 45%;
+	margin-top: -10px;
+}
+
+.ip-header .ip-inner {
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* Content */
+.ip-main {
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+
+}
+
+
+
+/* Initial animation of header elements */
+.loading .ip-loader {
+	opacity: 1;
+	-webkit-animation: animInitialHeader 0.4s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animInitialHeader 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+@-webkit-keyframes animInitialHeader {
+	from { opacity: 1; }
+}
+
+@keyframes animInitialHeader {
+	from { opacity: 1; }
+}
+
+/* Header elements when loading finishes */
+.loaded .ip-loader {
+	opacity: 1;
+}
+
+.loaded .ip-loader {
+	-webkit-animation: animLoadedLoader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedLoader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedLoader {
+	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+@keyframes animLoadedLoader {
+	to { opacity: 0; -webkit-transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); transform: translate3d(0,-100%,0) scale3d(0.3,0.3,1); }
+}
+
+/* Header animation when loading finishes */
+.loaded .ip-header {
+	-webkit-animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+	animation: animLoadedHeader 1s cubic-bezier(0.7,0,0.3,1) forwards;
+}
+
+@-webkit-keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); }
+}
+
+@keyframes animLoadedHeader {
+	to { -webkit-transform: translate3d(0,-100%,0); transform: translate3d(0,-100%,0); }
+}
+
+/* Content animations */
+.loaded .ip-main h1,
+.loaded .ip-main h2,
+.loaded .ip-main section p,
+.loaded .ip-main section ul {
+	-webkit-animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+	animation: animLoadedContent 1s cubic-bezier(0.7,0,0.3,1) both;
+}
+
+@-webkit-keyframes animLoadedContent {
+	from { opacity: 0; -webkit-transform: translate3d(0,200px,0); }
+}
+
+@keyframes animLoadedContent {
+	from { opacity: 0; -webkit-transform: translate3d(0,200px,0); transform: translate3d(0,200px,0); }
+}
+
+/* No JS */
+.no-js .ip-header {
+	position: relative;
+	min-height: 0px;
+}
+
+
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+.fixed {
+	position: fixed;
+	top: 51px;
+}
+
+.half {
+	float: left;
+
+}
+
+.half.left {
+	width: 40%;
+	padding-left: 5%;
+	padding-right: 2.5%;
+}
+
+.half.right {
+	width: 60%;
+	padding-right: 5%;
+}
+
+.cd-section {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+}
+
+.cd-section:nth-of-type(odd) {
+  background-color: #fff;
+}
+
+.cd-section:nth-of-type(even) {
+  background-color: #f4f3f3;
+}
+
+
+/* NAVIGATION */
+
+nav {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	top: 40px;
+	left: 0;
+}
+
+nav li {
+	line-height: 30px;
+}
+
+nav li, nav li a {
+	border: none;
+	font-size: .85em;
+	color: rgba(255, 255, 255,.5);
+}
+
+nav li a:hover {
+	color: rgba(255, 255, 255,.7);
+}
+
+.menu-onepage-container {
+
+}
+
+#menu-onepage {
+	float: left;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#menu-onepage li {
+	float: left;
+	width: 25%;
+}
+
+#qtranslate-chooser {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#qtranslate-chooser li {
+	display: inline-block;
+	margin-right: 1px;
+}
+
+#qtranslate-chooser li:last-child:before {
+	content: "/";
+}
+
+/* SECTIONS */
+
+#intro {
+	background-color: #def1e8;
+	background-color: #2c313b;
+	font-weight: bold;
+}
+
+#intro .container {
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	-moz-transform: translate(-50%, -45%);
+	-webkit-transform: translate(-50%, -45%);
+	-o-transform: translate(-50%, -45%);
+	-ms-transform: translate(-50%, -45%);
+	transform: translate(-50%, -45%);
+	overflow: visible;
+}
+
+#intro .container, #intro .container a {
+	color: rgba(255,255,255,.7);
+}
+
+#intro .container a:hover {
+	color: rgba(255,255,255,1);
+}
+
+#bg-section1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	background: url(../img/library.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 1;
+}
+
+#presentations, #awards {
+	height: auto !important;
+}
+
+/* --------------------------------
+
+Footer
+
+-------------------------------- */
+
+footer {
+	position: fixed;
+	width: 100%;
+	height: 150px;
+	font-size: .85em;
+	background-color: #2c313b;
+	color: rgba(255,255,255,.7);
+	line-height: 1.45em;
+	padding: 110px 0;
+	bottom: 0;
+	font-weight: bold;
+
+}
+
+footer a {
+	color: rgba(255,255,255,.7);
+	border: none;
+}
+
+footer a:hover {
+	color: rgba(255,255,255,1);
+	border: none;
+}
+
+footer .half.left, footer .half.right {
+	width: 40%;
+	height: 90px;
+	margin-bottom: 20px;
+}
+
+footer .half.left.last, footer .half.right.last{
+	height: 20px;
+}
+
+footer .half.scroll {
+	width: 20%;
+	padding-right: 5%;
+}
+
+.line {
+	display: block;
+}
+
+#scrollTop {
+	float: right;
+	width: 90px;
+	height: 90px;
+	padding-top: 5px;
+	opacity: .7;
+}
+
+#scrollTop svg {
+	display: block;
+}
+
+#scrollTop:hover {
+	opacity: 1;
+}
+
+/* PAGE 404 */
+
+#post-not-found {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	text-align: center;
+}
+
+#post-not-found div {
+	position: relative;
+	height: 160px;
+	margin-top: -80px;
+	top: 50%;
+}
+
+#post-not-found h3 {
+	font-size: 6em;
+	line-height: 1em;
+	margin: 0;
+	font-weight: bold;
+	letter-spacing: -4px;
+}
+
+#post-not-found p {
+	font-size: 1.55em;
+	line-height: 2em;
+}
+
+/* IMPRINT */
+
+#imprint {
+	background-color: #def1e8;
+	margin: 0;
+}
+
+#imprint h1 {
+	text-align: center;
+	font-size: .95em;
+	line-height: 2em;
+	font-weight: bold;
+}
+
+#imprint a:hover {
+	color: #210e17;
+	border: none;
+}
+
+#imprint section {
+	position: relative;
+}
+
+#imprint .container {
+	position: absolute;
+	width: 90%;
+	left: 50%;
+	top: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	overflow: visible;
+}
+
+.back {
+	display: block;
+	font-size: .95em;
+	margin-top: 2em;
+	border: none;
+	font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1280px) {
+	body {
+		font-size: 85%;
+	}
+
+	.half.left {
+		width: 41%;
+		padding-left: 4%;
+	}
+
+	.half.right {
+		width: 59%;
+		padding-right: 4%;
+	}
+
+	#education {
+		height: auto !important;
+	}
+
+	#scrollTop {
+		width: 75px;
+		height: 75px;
+	}
+
+	footer {
+		font-size: .95em;
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	.layout-switch .ip-header {
+		display: none;
+	}
+
+	.fixed {
+		position: relative;
+		top: auto;
+	}
+}
+
+@media screen and (max-width: 400px) {
+
+	body {
+		margin-bottom:0;
+	}
+
+	p, li {
+		font-size: 1em;
+	}
+
+	nav {
+		display: none;
+	}
+
+	.ip-main {
+		margin-bottom: 0;
+	}
+
+	#bg-section1 {
+		display: none;
+	}
+
+	#intro {
+		min-height: 555px !important;
+	}
+
+	#intro, #intro .container {
+		opacity: 1 !important;
+	}
+
+	#intro .container, #imprint .container {
+		position: absolute;
+		left: 0;
+		top: 20px;
+		-moz-transform: none;
+		-webkit-transform: none;
+		-o-transform: none;
+		-ms-transform: none;
+		transform: none;
+	}
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	.hero p {
+		font-size: 1em;
+	}
+
+	section {
+		height: auto !important;
+	}
+
+	.cd-section {
+		padding: 15px 0;
+	}
+
+	h2 {
+		font-size: 1.25em;
+		line-height: 1.25em;
+		margin: 1.65em 0;
+	}
+
+	#filler {
+		display: none !important;
+	}
+
+	.half.left,
+	.half.right{
+		width: 92%;
+		float: none;
+		margin: 4%;
+		padding: 0;
+	}
+
+	footer {
+		position: relative;
+		padding: 40px 0;
+	}
+
+	footer .half.left, footer .half.right {
+		width: 90%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+
+	#scrollTop {
+		display: block;
+		position: absolute;
+		bottom: -120px;
+		width: 40px;
+		height: 40px;
+		left: 16%;
+	}
+
+	#imprint h1 {
+		text-align: left;
+	}
+
+	.back  {
+		margin-bottom: 20%;
+	}
+}
