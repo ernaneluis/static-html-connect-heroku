@@ -1,0 +1,30 @@
+{
+  "name": "static-html-connect-heroku",
+  "version": "0.0.1",
+  "description": "This repository holds a boilerplate to create a webserver that serves static html pages hosted in HEROKU",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaquindev/static-html-connect-heroku.git"
+  },
+  "keywords": [
+    "static",
+    "webserver",
+    "heroku",
+    "nodejs",
+    "connect"
+  ],
+  "author": "joaquindev",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "bc965fcb1cbc6727c95fe66ad99be4f1434797cb",
+  "dependencies": {
+    "connect": "~2.12.0"
+  }, 
+  "engines": {
+    "node": "0.10.x"
+  }
+}
