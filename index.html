@@ -14,9 +14,9 @@
   <link rel="canonical" href="http://ernane.me/">
 
     
-  <link rel="icon" href="🤓">
+  <!-- <link rel="icon" href="🤓"> -->
 
-  <title>🤓 Ernane Luis</title>
+  <title>Ernane Luis</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -82,7 +82,7 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       color: white;
-      margin-bottom: 5%;
+      /* margin-bottom: 5%; */
     }
 
     @-webkit-keyframes grid {
@@ -142,14 +142,16 @@
     }
 
     #projects {
-      background:transparent; 
+      /* background:transparent;  */
       z-index: 1;
       position:relative; 
-      margin-top:1em;
+      /* margin-top:1em; */
     }
     section {
-      margin-top: 1em;
-      margin-bottom: 1em;
+      padding-bottom: 2em;
+      padding-top: 2em;
+      /* margin-top: 1em;*/
+      margin-bottom: 0em; 
     }
     section h1{
       margin-top: 1em;
@@ -166,6 +168,22 @@
       /* line-height: 20px; */
       /* font-size: 14px; */
       color: darkgrey;
+    }
+
+    #pitch {
+      background-color: #3C3C3C
+    }
+
+    #projects {
+      background-color: #424242
+    }
+
+    #education {
+      background-color: #3C3C3C
+    }
+
+    #techs {
+      background-color: #424242
     }
   </style>
 </head>
@@ -209,35 +227,42 @@
     <div class="grid"></div>
   </section>
 
-  <div class="container">
-    <div class="row">
-      <h1 style="color:white; text-align: center"> <i>Through a good understanding of the client needs, rigorous attention to detail and versatile production techniques.</i></h1>
+  <section id="pitch">
+    <div class="container">
+      <div class="row">
+        <h1 style="color:white; text-align: center"> <i>Through a good understanding of the client needs, rigorous attention to detail and versatile production techniques.</i></h1>
+      </div>
     </div>
-  </div>
+</section>
 
-
-  <section id="projects" class="container">
-    <h1> #projects </h1>
+  <section id="projects">
+      <div class="container">
+          <h1> #projects </h1>
+      </div>
   </section>
   <!-- /container -->
 
   
-  <section id="education" class="container">
-      <h1> #education </h1>
+  <section id="education">
+      <div class="container">
+          <h1> #education </h1>
+      </div>
   </section>
 
 
-  <section id="techs" class="container">
+  <section id="techs">
+     <div class="container">  
       <h1> #techs </h1>
-      
+     </div> 
   </section>
 
 
-  <section  class="container">
+  <section>
+    <div class="container">
       <footer>
           <p>2017 © Insert something that usally is not userful </p>
       </footer>
-      
+    </div>
   </section>
 
 
@@ -358,7 +383,7 @@
       html += '</div>'
     }
 
-    $('#projects').append(html) 
+    $('#projects .container').append(html) 
 
 
     var education = [
@@ -386,17 +411,20 @@
     for(var i=0; i< education.length; i++) {
       var object = education[i]
       html += '<div class="row">'
-        html += '<strong>' + object.date + '</strong> &nbsp;'
-        html += '<h4>' 
-            html += '<a href="#">'
-                html += object.name + '»'
-            html += '</a>'
-        html += '</h4>'
-        html += '<p class="description">' +' ' + object.description + '</p>'
+        html += '<div class="col-md-12">'
+          
+          html += '<strong>' + object.date + '</strong> &nbsp;'
+          html += '<h4>' 
+              html += '<a href="#">'
+                  html += object.name + '»'
+              html += '</a>'
+          html += '</h4>'
+          html += '<p class="description">' +' ' + object.description + '</p>'
+        html += '</div>'
       html += '</div>'
     }
 
-    $('#education').append(html) 
+    $('#education .container').append(html) 
     
     var techs = ["angular2", "ionic2", "javascript", "es6", "ethereum", "web3.js", "ios sdk", "android sdk", "php", "node.js", "express.js", "sails.js", "sequelize.js", "postgreSQL", "mySQL", "photoshop", "git", "machine learning", "economics", "typescript", "python", "numpy", "pandas", "docker", "css3", "svg"];
 
@@ -409,7 +437,7 @@
 
     }
 
-    $('#techs').append(html) 
+    $('#techs .container').append(html) 
     
   </script>
 
